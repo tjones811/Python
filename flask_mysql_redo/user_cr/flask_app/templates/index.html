@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>All Users</h5>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for user in all_users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>
+            <a href="/user/show/{{user.id}}">{{ user.first_name }} {{ user.last_name }}</a></td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.created_at }}</td>
+            <td><a href="/user/show/{{user.id}}">Show</a></td>
+            <td><a href="/user/edit/{{user.id}}">Edit</a></td>
+            <td><a href="/user/delete/{{user.id}}">Delete</a></td>
+        </tr>
+            {% endfor%}
+    </table>
+    
+    <h1>Factions</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Date Established</th>
+            
+        </tr>
+
+        {% for faction in all_factions %}
+        <tr>
+            <td><a href="/faction/{{faction.id}}">{{ faction.id }}</a></td>
+            <td>{{ faction.name }}</td>
+            <td>{{ faction.level }}</td>
+            <td>{{faction.date_created}}</td>
+            
+        </tr>
+            {% endfor%}
+    </table>
+
+
+    <a href="/create_user">Add New User</a>
+    <a href="/faction/new">Add New Faction</a>
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+.c1{
+    background-color: {{color1}};
+}
+.c2{
+    background-color: {{color2}};
+}
+
+td{
+    height: 100px;
+    width: 100px;
+}

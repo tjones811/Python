@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Faction</h1>
+
+    <p>Faction ID: {{one_faction.id}}</p>
+    <p>Name: {{one_faction.name}}</p>
+    <p>Date Created: {{one_faction.date_created}}</p>
+    <p>Level: {{one_faction.level}}</p>
+
+    <h4>Friends in Factions:</h4>
+    {% for one_user in one_faction.users %}
+
+    <h3> {{one_user.first_name}}</h3>
+    
+    
+    {%endfor %}
+
+
+    
+
+
+</body>
+</html>

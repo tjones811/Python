@@ -1,0 +1,55 @@
+INSERT INTO dojos (name,created_at,updated_at)
+VALUES ('Earth',NOW(),NOW());
+
+INSERT INTO dojos (name,created_at,updated_at)
+VALUES ('Water',NOW(),NOW());
+
+INSERT INTO dojos (name,created_at,updated_at)
+VALUES ('Air',NOW(),NOW());
+
+
+
+DELETE FROM dojos_and_ninjas_schema.dojos
+
+
+INSERT INTO dojos (name,created_at,updated_at)
+VALUES ('Earth',NOW(),NOW());
+
+INSERT INTO dojos (name,created_at,updated_at)
+VALUES ('Water',NOW(),NOW());
+
+INSERT INTO dojos (name,created_at,updated_at)
+VALUES ('Air',NOW(),NOW());
+
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('ninja','jones',27,NOW(),NOW(),8);
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('ninja','jones',27,NOW(),NOW(),8);
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('ninja','jones',27,NOW(),NOW(),8);
+
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('trey','jones',27,NOW(),NOW(),9);
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('trey','jones',27,NOW(),NOW(),9);
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('trey','jones',27,NOW(),NOW(),9);
+
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('trevon','jones',27,NOW(),NOW(),10);
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('trevon','jones',27,NOW(),NOW(),10);
+INSERT INTO ninjas (first_name,last_name,age,created_at,updated_at,dojo_id)
+VALUES ('trevon','jones',27,NOW(),NOW(),10);
+
+SELECT * FROM ninjas
+WHERE dojo_id = 8;
+
+SELECT * FROM ninjas
+WHERE dojo_id = 10;
+
+SELECT *
+FROM ninjas
+JOIN dojos ON dojos.id = ninjas.dojo_id
+ORDER BY ninjas.id DESC 
+LIMIT 1;
